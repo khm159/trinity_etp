@@ -39,7 +39,5 @@ WIP
 
 # 📖 Citation
 
-If you use code of **SPOC** in your research, please cite :
-
 WIP
 
