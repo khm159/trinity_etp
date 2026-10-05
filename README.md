@@ -23,7 +23,7 @@ Code for paper "Trinity: Human–Agent–Environment Alignment for Embodied Task
 ## 📌 News
 
 - 2026.08.21 Trinity is accepted to **EMNLP findings 2026!** 🥳
-- 
+
 # 🔥 Abstract 
 
 ![fig1](assets/figure1.png)
