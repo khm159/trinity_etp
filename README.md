@@ -18,7 +18,7 @@ Trinity: Human–Agent–Environment Alignment for Embodied Task Planning
 <p align="center">*Corresponding Author</p>
 
 
-Code for paper "Trinity: Human–Agent–Environment Alignment for Embodied Task Planning", EMNLP (findings) 2026 
+Code for paper "Trinity: Human–Agent–Environment Alignment for Embodied Task Planning", *EMNLP (findings)*, 2026 
 
 ## 📌 News
 
