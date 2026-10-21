@@ -1,0 +1,66 @@
+name: StateAct_HAE_L1_NA_gpt4o-mini
+# HAE - Level 1 - Naive Adaptation Setting (GPT-4O-Mini)
+
+defaults:
+  - hydra: default.yaml
+
+out_dir: ${hydra:run.dir}
+
+# prompt-related configurations
+prompt:
+  splitter: ""
+  system_prompt_path: 'resource/system_prompt/stateact_system_with_rules_gpt.txt'
+  ic_ex_dir: 'resource/example_dir/stateact_AE_example'
+  # if ic_ex_dir set to AED example, the the setting will be the same as AED (e.g. resource/example_dir/Act_AED_example)
+  # if this set to other level example, the setting will be the same as that HAE-Lx Few-shot Adaptation Setting (e.g. resource/example_dir/Act_HAE_L3_example)
+  # if you want to switch the level, please also change the dataset path in trinity.dataset_path and train_set/eval_set path (e.g. dataset/HAE_Dataset/val/L3)
+  
+# agent-related configurations
+agent: 
+  agent_type: 'stateact'  
+  ic_ex_select_type: 'rag' 
+  max_steps: 60 
+  max_decisions: 99
+  max_depth: 20
+  think_every_step: True
+
+# llm-related configurations 
+llm:
+  model_name: 'gpt-4o-mini-2024-07-18'  
+  serve_url: 'use_local_model'  
+  sbert_model_name: 'all-MiniLM-L6-v2'
+  use_accelerate_device_map: True
+  load_in_8bit: False
+  random_seed: 0
+  device: 'cuda' 
+  openai_api_key: 'no_key'
+  skill_selection_mode: 'fuzzy_matching' 
+
+# dataset-related configurations 
+trinity:
+  dataset_path: 'dataset/HAE_Dataset' 
+  train_set: 'train/L1' 
+  eval_set: 'val/L1'
+  is_hae_dataset: True
+  task_goal_template_path: 'dataset/HAE_templates'
+
+# ai2thor configurations
+ai2thor:
+  screen_width: 224 
+  screen_height: 224
+  fov: 90
+  x_display: 0
+  is_agent_cam_rgb_frame_save: True
+  is_agent_cam_depth_frame_save: False
+  is_agent_cam_sementic_mask_frame_save: False
+  is_agent_cam_instance_mask_frame_save: False
+  is_agent_cam_2d_bbox_frame_save: False
+  is_agent_cam_3d_bbox_frame_save: False
+  is_topview_cam_rgb_frame_save: True
+  is_agent_view_cam_rgb_frame_save: True
+  visualize_agent_view_frame: False
+  visualize_top_view_frame: True
+  cam_frame_save_path: 'trinity_exp_img_dir'
+
+log:
+  save_path: 'work_dir/StateAct/HAE_L1_NA/gpt4o-mini'

@@ -1,0 +1,63 @@
+name: react_im_HAE_L1_FA_gpt4o-mini
+# HAE - Level 1 - Few-shot Adaptation Setting (GPT-4O-Mini)
+
+defaults:
+  - hydra: default.yaml
+
+out_dir: ${hydra:run.dir}
+
+# prompt-related configurations
+prompt:
+  splitter: ""
+  system_prompt_path: 'resource/system_prompt/react-im_system_with_rules_gpt.txt'
+  ic_ex_dir: 'resource/example_dir/react-IM_HAE_L1_example'
+  
+# agent-related configurations
+agent: 
+  agent_type: 'react' 
+  ic_ex_select_type: 'rag' 
+  max_steps: 60 
+  max_decisions: 99
+  max_depth: 20
+  think_every_step: True # should be True for react-im, False for react
+
+# llm-model-related configurations 
+llm:
+  model_name: 'gpt-4o-mini-2024-07-18' 
+  serve_url: '' 
+  sbert_model_name: 'all-MiniLM-L6-v2'
+  use_accelerate_device_map: True
+  load_in_8bit: False
+  random_seed: 0
+  device: 'cuda'
+  openai_api_key: 'your_key'
+  skill_selection_mode: 'fuzzy_matching' 
+
+# dataset-related configurations 
+trinity:
+  dataset_path: 'dataset/HAE_Dataset' 
+  train_set: 'train/L1' 
+  eval_set: 'val/L1'
+  is_hae_dataset: True
+  task_goal_template_path: 'dataset/HAE_templates'
+
+# ai2thor configurations
+ai2thor:
+  screen_width: 224
+  screen_height: 224 
+  fov: 90
+  x_display: 0
+  is_agent_cam_rgb_frame_save: True
+  is_agent_cam_depth_frame_save: False
+  is_agent_cam_sementic_mask_frame_save: False
+  is_agent_cam_instance_mask_frame_save: False
+  is_agent_cam_2d_bbox_frame_save: False
+  is_agent_cam_3d_bbox_frame_save: False
+  is_topview_cam_rgb_frame_save: True
+  is_agent_view_cam_rgb_frame_save: True
+  visualize_agent_view_frame: False
+  visualize_top_view_frame: True
+  cam_frame_save_path: 'trinity_exp_img_dir'
+
+log:
+  save_path: 'work_dir/react_im/HAE_L1_FA/gpt4o-mini'
