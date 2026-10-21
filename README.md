@@ -48,10 +48,6 @@ For installation, refer to [INSTALLATION.md](./INSTALLATION.md)
 
 **Warning: The headless setting (a server without a display connection) is not yet supported. Please run this code on a local machine connected to a physical display.** 
 
-# 🚀 Quick Start
-
-WIP
-
 # 🤖 Supported Agent
 
 - [ACT agent (ICLR'23)](https://openreview.net/forum?id=WE_vluYUL-X)
