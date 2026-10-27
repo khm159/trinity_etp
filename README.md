@@ -3,7 +3,7 @@ Trinity: Human–Agent–Environment Alignment for Embodied Task Planning
 </h1>
 
 <p align="center">
-  📄  <a href="https://arxiv.org"><strong>Paper(arXiv, comming soon!)</strong></a> 
+  📄  <a href="[https://arxiv.org](https://aclanthology.org/2026.findings-emnlp.237/)"><strong>Paper</strong></a> 
 </p>
 
 <p align="center">
