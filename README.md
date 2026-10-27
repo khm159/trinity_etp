@@ -139,5 +139,25 @@ In Trinity, there are multiple rooms in each scene, the room to room navigation 
 
 # 📖 Citation
 
-WIP
-
+```
+@inproceedings{kim-etal-2026-trinity,
+    title = "Trinity: Human{--}Agent{--}Environment Alignment for Embodied Task Planning",
+    author = "Kim, Hyungmin  and
+      Jeon, Hobeom  and
+      Kim, Dohyung  and
+      Jang, Jinhyeok  and
+      Jang, Minsu",
+    editor = "Lee, Hung-Yi  and
+      Dev, Sunipa  and
+      Li, Jessy  and
+      Elliott, Desmond",
+    booktitle = "Findings of the {A}ssociation for {C}omputational {L}inguistics: {EMNLP} 2026",
+    month = oct,
+    year = "2026",
+    address = "Budapest, Hungary",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.findings-emnlp.237/",
+    pages = "4974--5013",
+    ISBN = "979-8-89176-462-0"
+}
+```
